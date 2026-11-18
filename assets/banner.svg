@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="t d">
+  <title id="t">fitfix</title>
+  <desc id="d">fitfix: repair corrupted or truncated Garmin FIT activity files, locally.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="ok" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="340" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="338" rx="17" fill="none" stroke="#334155" stroke-width="2"/>
+
+  <text x="80" y="140" fill="#f8fafc" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="700" letter-spacing="-1">fitfix</text>
+  <text x="82" y="190" fill="#cbd5e1" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="28">Repair corrupted or truncated Garmin .FIT files.</text>
+  <text x="82" y="228" fill="#94a3b8" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22">Local-only CLI and TypeScript library. Zero runtime dependencies.</text>
+
+  <!-- damaged stream -> repaired stream -->
+  <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+    <text x="720" y="96" fill="#94a3b8">damaged</text>
+    <g fill="#475569">
+      <rect x="720" y="108" width="60" height="22" rx="4"/>
+      <rect x="788" y="108" width="60" height="22" rx="4"/>
+      <rect x="856" y="108" width="60" height="22" rx="4"/>
+      <rect x="924" y="108" width="60" height="22" rx="4"/>
+    </g>
+    <rect x="992" y="108" width="34" height="22" rx="4" fill="#f87171"/>
+    <path d="M1034 108 l14 11 l-14 11 M1056 108 l14 11 l-14 11" stroke="#f87171" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="720" y="176" fill="#94a3b8">repaired</text>
+    <g fill="#38bdf8">
+      <rect x="720" y="188" width="60" height="22" rx="4"/>
+      <rect x="788" y="188" width="60" height="22" rx="4"/>
+      <rect x="856" y="188" width="60" height="22" rx="4"/>
+      <rect x="924" y="188" width="60" height="22" rx="4"/>
+    </g>
+    <g fill="url(#ok)">
+      <rect x="992" y="188" width="54" height="22" rx="4"/>
+      <rect x="1054" y="188" width="54" height="22" rx="4"/>
+    </g>
+    <text x="720" y="248" fill="#34d399">+ lap, session, activity, CRC</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+{
+  "name": "fitfix",
+  "version": "0.1.0",
+  "description": "Repair corrupted or truncated Garmin .FIT activity files locally: header, data size, CRC, cut-off records and missing lap/session/activity messages.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emincanozen/fitfix.git"
+  },
+  "homepage": "https://github.com/Emincanozen/fitfix#readme",
+  "bugs": {
+    "url": "https://github.com/Emincanozen/fitfix/issues"
+  },
+  "type": "module",
+  "bin": {
+    "fitfix": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run clean && npm run build",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test \".test-build/test/*.test.js\"",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "clean": "node -e \"for (const d of ['dist','.test-build']) require('node:fs').rmSync(d,{recursive:true,force:true})\""
+  },
+  "keywords": [
+    "fit",
+    "garmin",
+    "fit-file",
+    "repair",
+    "corrupt",
+    "strava",
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "fit-file-parser": "6.2.7",
+    "typescript": "5.9.3"
+  }
+}

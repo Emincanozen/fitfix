@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.test-build/
+coverage/
+*.log
+*.tgz
+.DS_Store
+Thumbs.db
+# Never commit real activity files by accident
+*.fit
+*.FIT
+!test/fixtures/**/*.fit
+.env
+.env.*
