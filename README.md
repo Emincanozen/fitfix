@@ -253,6 +253,10 @@ CI (`.github/workflows/ci.yml`) runs typecheck, build, tests and a CLI smoke tes
 - Publish to npm.
 - A browser build (the core library has no Node-specific dependencies).
 
+## Contributing
+
+Issues and pull requests are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [SECURITY.md](SECURITY.md). Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
