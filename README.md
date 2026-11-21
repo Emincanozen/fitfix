@@ -2,6 +2,8 @@
 
 <img src="assets/banner.svg" alt="fitfix: repair corrupted or truncated Garmin FIT files" width="100%">
 
+[![npm](https://img.shields.io/npm/v/fitfix.svg?logo=npm)](https://www.npmjs.com/package/fitfix)
+[![npm downloads](https://img.shields.io/npm/dm/fitfix.svg)](https://www.npmjs.com/package/fitfix)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js >= 22](https://img.shields.io/badge/node-%3E%3D22-339933.svg?logo=node.js&logoColor=white)](package.json)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6.svg?logo=typescript&logoColor=white)](tsconfig.json)
@@ -171,11 +173,21 @@ fitfix is early software. Please read this before trusting it with the only copy
 - If the beginning of the file is lost (including the definition messages), data messages that depend on those definitions cannot be decoded and are dropped.
 - Course, workout, and monitoring files are only repaired at the byte level; summary messages are added only to activity files.
 - The whole file is held in memory several times. This is fine for activity files (a few megabytes); fitfix is not designed for files of hundreds of megabytes.
-- Not published to npm. No browser version yet.
+- No browser version yet.
 
 ## Quick start
 
-Requires Node.js 22 or newer (on Windows PowerShell use `npm.cmd` instead of `npm`):
+Requires Node.js 22 or newer (on Windows PowerShell use `npm.cmd` instead of `npm`).
+
+Install from npm:
+
+```sh
+npm install -g fitfix
+fitfix --version
+fitfix inspect ride.fit
+```
+
+Or build from source and try it on a synthetic broken file:
 
 ```sh
 git clone https://github.com/Emincanozen/fitfix.git
@@ -188,7 +200,7 @@ node dist/cli.js inspect ride.fit
 node dist/cli.js repair ride.fit
 ```
 
-Optional: `npm link` makes the `fitfix` command available globally.
+From source, `npm link` makes the `fitfix` command available globally.
 
 ## Usage
 
